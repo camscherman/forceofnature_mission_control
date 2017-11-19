@@ -1,0 +1,9 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#message-box {
+  overflow: auto;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50px;
+}
