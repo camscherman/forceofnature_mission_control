@@ -6,19 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type='text/javascript' src='fullcalendar/gcal.js'></script>
+
   </head>
 
   <body>
     <% flash.each do |name,msg| %>
       <%= content_tag(:div,:msg, class: "alert alert-#{name}" ) %>
     <% end %>
-    <% if user_signed_in? %>
+    <%# if user_signed_in? %>
       <!-- <ul>
         <li><%= link_to 'New Event', new_event_path %></li>
         <li><%= link_to 'Account', edit_user_registration_path %></li>
         <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
       </ul> -->
-      <% else %>
+      <%# else %>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -74,7 +76,7 @@
       </div>
         <!-- <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         <li><%= link_to 'Sign In', new_user_session_path %></li> -->
-    <% end %>
+    <%# end %>
     <%= yield %>
   </body>
 </html>

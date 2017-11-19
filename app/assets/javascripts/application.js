@@ -13,5 +13,19 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/gcal
 //= require rails-ujs
 //= require_tree .
+
+
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        googleCalendarApiKey: 'AIzaSyCpsNSu1HKCXGxYGN8k88rTiAYRjau_Ckw',
+        events: {
+            // googleCalendarId: '8ts0o3q0tuabk57ikucbusg6jc@group.calendar.google.com',
+            color: 'blue',   // an option!
+            textColor: 'white'        }
+    });
+});
