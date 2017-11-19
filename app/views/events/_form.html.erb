@@ -1,15 +1,14 @@
-  <div class="container">
-    <div class="row">
+  <div class="container" style="background-color:whitesmoke;box-shadow: 2px 2px 2px #888888;">
+    <div class="row" style="padding: 20px;margin-top: 20px;margin-bottom: 30px;border-radius: 10px;">
       <div class="col-md-7">
+
 
           <%= form_with(model: event, local: true) do |form| %>
             <% if event.errors.any? %>
               <div id="error_explanation">
-                <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
                 <ul>
                 <% event.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
+                  <li style="color: red;"><%= message %></li>
                 <% end %>
                 </ul>
               </div>
@@ -54,11 +53,23 @@
 
       </div>
 
+      <!-- Users Section -->
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-body">
+            USERS INFORMATION
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="row" style="margin: auto">
-    <button type="submit" class="btn btn-primary" name="commit" style="margin: auto">SAVE & CLOSE</button>
+
+  <div class="container">
+    <div class="row" style="margin: auto">
+      <button type="submit" class="btn btn-primary" name="commit" style="margin: auto;width: 100%">SAVE & CLOSE</button>
+    </div>
   </div>
     <% end %>
 <% end %>
