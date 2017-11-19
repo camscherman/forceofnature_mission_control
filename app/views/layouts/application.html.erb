@@ -40,6 +40,29 @@
               <%= link_to('Slack', root_path, class: "nav-link") %>
             </li>
           </ul>
+          <!-- If user signed in -->
+          <% if user_signed_in? %>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <%= link_to('New Event', new_event_path, class: "nav-link") %>
+              </li>
+              <li class="nav-item">
+                <%= link_to('Account', edit_user_registration_path, class: "nav-link") %>
+              </li>
+              <li class="nav-item">
+                <%= link_to('Sign out', destroy_user_session_path, :method => :delete, class: "nav-link") %>
+              </li>
+          </ul>
+          <% else %>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <%= link_to('Sign in', new_user_session_path, class: "nav-link") %>
+              </li>
+              <li class="nav-item">
+                <%= link_to('Sign up', new_user_registration_path, class: "nav-link") %>
+              </li>
+            </ul>
+          <% end %>
 
         </div>
       </nav>
