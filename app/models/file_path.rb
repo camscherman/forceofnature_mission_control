@@ -1,0 +1,2 @@
+class FilePath < ApplicationRecord
+end

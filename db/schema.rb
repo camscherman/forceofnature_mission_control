@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119010219) do
+ActiveRecord::Schema.define(version: 20171119213852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,12 @@ ActiveRecord::Schema.define(version: 20171119010219) do
     t.index ["user_id"], name: "index_attendings_on_user_id"
   end
 
+  create_table "briefings", force: :cascade do |t|
+    t.string "filename"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
@@ -66,6 +72,13 @@ ActiveRecord::Schema.define(version: 20171119010219) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "file_paths", force: :cascade do |t|
+    t.string "path"
+    t.boolean "is_folder"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
