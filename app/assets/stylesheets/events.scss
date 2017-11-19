@@ -1,3 +1,33 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.rails-bootstrap-forms-datetime-select {
+  display: inline-block;
+  margin-left: 22px;
+}
+
+.editEvent:hover {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.45);
+  transition: box-shadow 0.1s ease-in-out;
+  position: relative;
+  top: -2px;
+}
+
+.editBack:hover {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.45);
+  transition: box-shadow 0.1s ease-in-out;
+  position: relative;
+  top: -2px;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
