@@ -23,6 +23,21 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
+
+gem 'jquery-rails'
+gem 'font-awesome-rails'
+gem 'devise'
+gem 'faker'
+
+gem 'delayed_job_active_record'
+gem 'delayed_job_web'
+
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'jquery-rails'
+gem 'bootstrap_form'
+# gem 'bootstrap_form'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -43,6 +58,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry' # pry gem itself
+  gem 'pry-rails' #another gem that integrates pry with rails seamlessly
+  gem 'hirb'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
