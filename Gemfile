@@ -24,14 +24,15 @@ gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'bootstrap'
 
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'faker'
-gem 'fullcalendar-rails'
-gem 'momentjs-rails'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'jquery-rails'
+gem 'bootstrap_form'
+# gem 'bootstrap_form'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
