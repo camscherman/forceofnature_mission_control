@@ -5,9 +5,34 @@
 
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :phone_number %><br />
+        <%= f.text_field :phone_number, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :address %><br />
+        <%= f.text_field :address, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :category %><br />
+        <%= f.text_field :category, autofocus: true %>
+      </div>
 
   <div class="field">
     <%= f.label :password %>
