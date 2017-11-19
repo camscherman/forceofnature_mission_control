@@ -23,9 +23,13 @@
 $(document).ready(function() {
     $('#calendar').fullCalendar({
         googleCalendarApiKey: 'AIzaSyCpsNSu1HKCXGxYGN8k88rTiAYRjau_Ckw',
-        events: {
-            // googleCalendarId: '8ts0o3q0tuabk57ikucbusg6jc@group.calendar.google.com',
-            color: 'blue',   // an option!
-            textColor: 'white'        }
+        eventSources:[ {
+            googleCalendarId: '8ts0o3q0tuabk57ikucbusg6jc@group.calendar.google.com'
+
+          },
+              {
+            url:'http://localhost:3000/api/v1/events'
+                 }
+               ]
     });
 });

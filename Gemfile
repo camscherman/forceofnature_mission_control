@@ -32,6 +32,7 @@ gem 'devise'
 gem 'faker'
 gem 'momentjs-rails'
 gem 'fullcalendar-rails', '>= 2.1.1'
+gem 'active_model_serializers'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
