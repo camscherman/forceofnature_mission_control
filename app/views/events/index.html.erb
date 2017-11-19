@@ -1,4 +1,50 @@
 <p id="notice"><%= notice %></p>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Check POPUP window
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">PLASE WORK</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        SUPSUPSUP adn form below
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ENDENDEND -->
 
   <div class="container d-flex justify-content-center align-items-center">
     <div class='col-md-2'>
@@ -17,12 +63,10 @@
     <div class='col-md-7 text-center'>
       <h3>UPCOMING EVENTS</h3>
         <div id="calendar"></div>
-        <!-- Calendar ID: 8ts0o3q0tuabk57ikucbusg6jc@group.calendar.google.com -->
-        <!-- <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=8ts0o3q0tuabk57ikucbusg6jc%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FVancouver" style="border-width:0" width="600" height="500" frameborder="0" scrolling="no"></iframe> -->
       </div>
 
     <div class='col-md-3 text-center align-items-center'>
-          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'VIEW EVENT', events_path, class:'text-light' %></link></button>
+          <button type='button' class='btn btn-primary btn-block' id='viewevent' style="width: 100%; height: 100px"><link><%= link_to 'VIEW EVENT', events_path, class:'text-light' %></link></button>
           <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'CREATE EVENT', events_path, class:'text-light' %></button>
           <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
 
@@ -37,9 +81,22 @@
       <h1 class='text-light'>SPACE CALENDAR</h1>
     </div>
 
+  <div class=container>
+    <table class="table table-striped">
+      <thead>
+        <tbody>
 
-  <!-- <tbody>
+        <tr>
+          <th scope="col">Event Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Start Time</th>
+          <th scope="col">End Time</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
     <% @events.each do |event| %>
+
+
       <tr>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
@@ -47,17 +104,19 @@
         <td><%= event.end_time %></td>
         <td><%= event.location %></td>
           <% if event.user == current_user %>
-          <td><%= link_to "Edit", event_path(event) %></td>
+          <td><button class='btn btn-primary'><%= link_to "Edit", event_path(event), class:'text-light' %></button></td>
 
           <td><%= link_to "Destroy", event, method: :delete, data: {confirm: "Are you sure?"} %></td>
              <% end %>
-        <td><%= link_to 'Show', event %></td>
-
+          <td><%= link_to 'Show', event %></td>
       </tr>
+
     <% end %>
   </tbody>
-</table> -->
+</table>
+</div>
+
 
 <!-- <br>
 
-<%= link_to 'New Event', new_event_path %> -->
+<%= link_to 'New Event', new_event_path %>

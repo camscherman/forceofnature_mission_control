@@ -52,6 +52,7 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.3, < 2)
       sass (>= 3.5.2)
+    bootstrap_form (2.7.0)
     builder (3.2.3)
     byebug (9.1.0)
     case_transform (0.2)
@@ -207,6 +208,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   bootstrap
+  bootstrap_form
   byebug
   coffee-rails (~> 4.2)
   devise
