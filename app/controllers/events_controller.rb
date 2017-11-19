@@ -30,7 +30,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        EventRemindersJob.set(wait_until: 2.minutes.from_now).perform_later(@event.id)
+        EventRemindersJob.set(wait: 20.seconds).perform_later(@event)
 
         #EventsMailer.notify_event_user_creator(@event).deliver_later
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
