@@ -1,4 +1,5 @@
 
+
 Event.destroy_all
 20.times.each do
   date = Faker::Date.forward(60)
@@ -11,3 +12,4 @@ Event.destroy_all
 end
 
 puts "#{Event.count} events added"
+

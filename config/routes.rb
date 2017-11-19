@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :attending, shallow: true, only: [:create, :destroy]
   end
 
+  resources :briefings
 
 
 
