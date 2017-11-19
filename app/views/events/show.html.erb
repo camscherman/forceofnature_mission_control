@@ -1,35 +1,53 @@
 <p id="notice"><%= notice %></p>
-<% if user_signed_in? %>
- <% if @attending.present? %>
-    <%= link_to "Unjoin event", attending_path(@attending), method: :delete %>
-    <% else %>
-    <%= link_to "Join Event", event_attending_index_path(@event), method: :post %>
-  <% end %>
-  <% end %>
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<div style="text-align: right;background-color:#4576ff;padding-bottom:0.5px;">
+    <% if user_signed_in? %>
+     <% if @attending.present? %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#ffa9a5;width: 85%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Unjoin event", attending_path(@attending), method: :delete, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
+         <% else %>
+        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#eaf5ff;width: 85%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Join Event", event_attending_index_path(@event), method: :post, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @event.start_time %>
-</p>
+     <% end %>
+    <% end %>
 
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time %>
-</p>
+</div>
+<br>
+<div style="background-color:#343a40;padding:40px;clip-path: polygon(0 0, 95% 0, 89% 100%, 0 100%);">
+  <div class="container">
+    <div class="card" style="background-color:#343a40;border-color:#4eb1f7;width: 80%;border-radius: 0 70px 0 0;">
+      <div class="card-body">
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
+        <h2 style="color: white;border-bottom: solid 1px;padding-bottom: 5px;"><%= @event.title %></h2>
+        <br>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+        <p style="color:white">
+          <%= @event.description %>
+        </p>
+
+        <p style="color:white">
+          <i class="fa fa-map fa-3" aria-hidden="true">&nbsp</i><strong style="font-style: italic">Location:</strong>
+          <%= @event.location %>
+        </p>
+
+        <p class="text-right" style="color:white">
+          <strong>Start time:</strong>
+          <%= @event.start_time %>
+        </p>
+
+        <p class="text-right" style="color:white">
+          <strong>End time:</strong>
+          <%= @event.end_time %>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+  <div style="width:96%;border-bottom: solid 3px; border-color: #eaf5ff;text-align: right">
+      <h2 class="edit_show" style="background-color:#c6edff; display: inline-block; margin-bottom: 0; margin-right: 30px;padding: 5px;padding-left: 20px;clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);"><%= link_to 'Edit', edit_event_path(@event) %></div>
+    <div style="width:96%;border-bottom: solid 3px; border-color: #eaf5ff;text-align: right;width: 80%;margin-top: 10px;">
+      <h2 class="edit_back" style="background-color:#c6edff; display: inline-block; margin-bottom: 0; margin-right: 30px;padding: 5px;padding-left: 20px;clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);"><%= link_to 'Back', events_path %></div>
+    </div>
+  </div>
