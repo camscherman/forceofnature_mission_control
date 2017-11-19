@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except:[:index, :show] 
+  before_action :authenticate_user!, except:[:index, :show]
 
   # GET /events
   # GET /events.json
@@ -30,6 +30,9 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
+        EventRemindersJob.set(wait_until: 2.minutes.from_now).perform_later(@event.id)
+
+        #EventsMailer.notify_event_user_creator(@event).deliver_later
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else

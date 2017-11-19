@@ -1,0 +1,12 @@
+<p>Hello <%# @event.user.first_name %></p>
+<p>You have joined a new event.</p>
+<br/>
+<p>The details of the event are listed below:</p>
+<p>Event: <%= @event.title %></p>
+<p>Description: <%= @event.description %></p>
+<p>Start Time: <%= @event.start_time.strftime("%B-%C-%G %R") %></p>
+<p>End Time: <%= @event.end_time.strftime("%B-%C-%G %R") %></p>
+<p>Location: <%= @event.location %></p>
+
+<p>See you soon and letsssss parrrrrrty!, </p>
+<p>Save the polar bear foundation</p>

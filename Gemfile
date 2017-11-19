@@ -30,6 +30,8 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'faker'
+gem 'delayed_job_active_record'
+gem 'delayed_job_web'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
