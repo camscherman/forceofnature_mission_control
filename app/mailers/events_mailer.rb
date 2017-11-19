@@ -3,16 +3,20 @@ class EventsMailer < ApplicationMailer
   def notify_event_user_creator(event)
     @event = event
     @user = event.user
-    recipients = [@user.email, 'bangotran21@gmail.com', 'wonpark89@gmail.com', 'dashosh91@gmail.com']
-    mail(bcc: recipients, subject: 'You have signed up for a new event!')
+    mail(bcc: "#{@user.email}", subject: 'You have created a new event!')
   end
 
 
-  def notify_event_user_join(event)
+  def notify_event_user_join(event, current_user)
+    @event = event
+    @user = current_user
+    mail(bcc: "#{@user.email}", subject: "You have joined #{event.title}!")
 
   end
 
-  def notify_event_users_all(event)
-
+  def notify_event_users_all(event, current_user)
+    @event = event
+    @user = current_user
+    mail(bcc: "#{@user.email}", subject: 'Friendly reminder about the event tomorrow!')
   end
 end
