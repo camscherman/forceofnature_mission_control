@@ -1,0 +1,3 @@
+class Briefing < ApplicationRecord
+    
+end
