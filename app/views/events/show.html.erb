@@ -1,18 +1,19 @@
-<p id="notice"><%= notice %></p>
-<div style="text-align: right;background-color:#4576ff;padding-bottom:0.5px;">
+<!-- <p id="notice"><%= notice %></p> -->
+
     <% if user_signed_in? %>
      <% if @attending.present? %>
-
-        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#ffa9a5;width: 85%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Unjoin event", attending_path(@attending), method: :delete, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
+<div style="text-align: right;background-color: red;padding-bottom:0.5px;">
+        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#f8f9fa;width: 85%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Unjoin event", attending_path(@attending), method: :delete, :style=>'margin-right: 45px; font-size: 30px;color: red;' %> </h1>
+</div>
          <% else %>
-        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#eaf5ff;width: 85%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Join Event", event_attending_index_path(@event), method: :post, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
-
+<div style="text-align: right;background-color:#4576ff;padding-bottom:0.5px;">
+        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#f8f9fa;width: 85%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Join Event", event_attending_index_path(@event), method: :post, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
+</div>
      <% end %>
     <% end %>
 
-</div>
-<br>
-<div style="background-color:#343a40;padding:40px;clip-path: polygon(0 0, 95% 0, 89% 100%, 0 100%);">
+
+<div style="background-color:#343a40;padding:40px;">
   <div class="container">
     <div class="card" style="background-color:#343a40;border-color:#4eb1f7;width: 80%;border-radius: 0 70px 0 0;">
       <div class="card-body">
@@ -51,3 +52,12 @@
       <h2 class="edit_back" style="background-color:#c6edff; display: inline-block; margin-bottom: 0; margin-right: 30px;padding: 5px;padding-left: 20px;clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);"><%= link_to 'Back', events_path %></div>
     </div>
   </div>
+
+<div>
+  <div class="footer" style="padding: 0;padding-bottom:60px;">
+    <div style="background-color: blue;padding-bottom:0.5px;height: 10px;">
+    </div>
+    <div style="width: 250px;background-color: blue;height: 60px;clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);">
+    <div>
+  </div>
+</div>
