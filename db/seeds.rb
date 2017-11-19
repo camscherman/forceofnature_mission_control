@@ -1,4 +1,5 @@
 
+
 Event.destroy_all
 User.destroy_all
 FilePath.destroy_all
@@ -43,3 +44,4 @@ end
 
 puts "#{FilePath.count} files and folders created"
 puts "#{Event.count} events added"
+

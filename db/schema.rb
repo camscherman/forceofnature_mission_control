@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171119213852) do
+=======
+ActiveRecord::Schema.define(version: 20171119190549) do
+>>>>>>> integration
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,7 +46,13 @@ ActiveRecord::Schema.define(version: 20171119213852) do
   end
 
   create_table "briefings", force: :cascade do |t|
+<<<<<<< HEAD
     t.string "filename"
+=======
+    t.string "doc_id"
+    t.string "file_id"
+    t.string "temp_team"
+>>>>>>> integration
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
