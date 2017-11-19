@@ -41,13 +41,13 @@ ActiveRecord::Schema.define(version: 20171119190549) do
     t.index ["user_id"], name: "index_attendings_on_user_id"
   end
 
-
   create_table "briefings", force: :cascade do |t|
     t.string "doc_id"
     t.string "file_id"
     t.string "temp_team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
@@ -62,7 +62,6 @@ ActiveRecord::Schema.define(version: 20171119190549) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
-
   end
 
   create_table "events", force: :cascade do |t|
