@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   devise_for :users
   resources :events do
     resources :attending, shallow: true, only: [:create, :destroy]
