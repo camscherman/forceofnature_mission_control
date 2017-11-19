@@ -1,20 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Events</h1>
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class='col-md-2'>
+      <h5 class='mb-2'>VIEW BY TEAM:</h5>
+      <ul class="list-unstyled list-border-black-20 list-border-y text-left text-black-70">
+        <li class='py-2 list-group-item'>Vancouver</li>
+        <li class='py-2 list-group-item'>Ricjmnd</li>
+        <li class='py-2 list-group-item'>Burnaby</li>
+        <li class='py-2 list-group-item'>Surrey</li>
+        <li class='py-2 list-group-item'>Port oody</li>
+        <li class='py-2 list-group-item'>Langley</li>
+        <li class='py-2 list-group-item'>Abbotsgord</li>
+      </ul>
+    </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Start time</th>
-      <th>End time</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class='col-md-7 text-center'>
+      <h3>UPCOMING EVENTS</h3>
+        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=8ts0o3q0tuabk57ikucbusg6jc%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FVancouver" style="border-width:0" width="600" height="500" frameborder="0" scrolling="no"></iframe>
+    </div>
 
-  <tbody>
+    <div class='col-md-3 text-center align-items-center'>
+          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'VIEW EVENT', events_path, class:'text-light' %></link></button>
+          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'CREATE EVENT', events_path, class:'text-light' %></button>
+          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
+
+    </div>
+
+  </div>
+
+
+
+
+    <div class='col-md-12 p-1 m-2 text-center' style="background-color: blue">
+      <h1 class='text-light'>SPACE CALENDAR</h1>
+    </div>
+
+
+  <!-- <tbody>
     <% @events.each do |event| %>
       <tr>
         <td><%= event.title %></td>
@@ -28,12 +50,12 @@
           <td><%= link_to "Destroy", event, method: :delete, data: {confirm: "Are you sure?"} %></td>
              <% end %>
         <td><%= link_to 'Show', event %></td>
-        
+
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
-<br>
+<!-- <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_event_path %> -->
