@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except:[:index, :show] 
+  before_action :authenticate_user!, except:[:index, :show]
 
   # GET /events
   # GET /events.json
@@ -11,6 +11,8 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @attending = @event.attending.find_by({user_id: current_user})
+    
   end
 
   # GET /events/new
