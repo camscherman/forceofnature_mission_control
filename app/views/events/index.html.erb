@@ -22,7 +22,7 @@
       </div>
 
     <div class='col-md-3 text-center align-items-center'>
-          <button type='button' class='btn btn-primary btn-block' id='viewevent' style="width: 100%; height: 100px"><link><%= link_to 'VIEW EVENT', events_path, class:'text-light' %></link></button>
+
 
           <button type='button' class='btn btn-primary btn-block my-2' data-toggle="modal" data-target="#createEvent" style="width: 100%; height: 100px">CREATE EVENT</button>
 
@@ -38,13 +38,11 @@
                 <div class="modal-body">
                   Please fill out the form below
                 <%= render 'form_modal', event: @event %>
-
                 </div>
               </div>
             </div>
           </div>
           <br>
-          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
 
     </div>
     <div id="footer_j">
