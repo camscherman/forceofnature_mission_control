@@ -2,6 +2,7 @@ class Event < ApplicationRecord
   belongs_to :user
   has_many :attending, dependent: :destroy
   has_many :attendees, through: :attending, source: :user
+  validates :title, :description, :location, presence: :true
 
   validate :valid_start_date, on: :create
   validate :valid_end_date, on: :create
