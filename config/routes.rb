@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   end
 
 
+  namespace :api, defaults: {format: :json} do
+  namespace :v1 do
+    resources :events
+  end
+end
   resources :teams
 
   resources :briefings
@@ -14,6 +19,7 @@ Rails.application.routes.draw do
 
 
   match "/delayed_job" => DelayedJobWeb, :anchor => false, :via => [:get, :post]
+
 
   root 'welcome#index'
 
