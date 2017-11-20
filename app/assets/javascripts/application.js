@@ -27,7 +27,7 @@
 $(document).ready(function(){
     $('.chosen-select').chosen({width: '500px'});
   });
-  
+
 
 
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
           },
               {
-            url:'http://localhost:3000/api/v1/events'
+            url:"/api/v1/events"
                  }
                ]
     });
@@ -49,7 +49,7 @@ $(document).ready(function() {
     $('#myModal').on('shown.bs.modal', function () {
       $('#myInput').focus()
     })
-    
+
 
     $('.chosen-select').chosen({width: '500px'});
 });
