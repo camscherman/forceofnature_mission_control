@@ -6,16 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <script type='text/javascript' src='fullcalendar/gcal.js'></script>
 
   </head>
 
   <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+        <!-- Logo -->
+        <div class=“row” style="background-color:#4576ff;">
+              <%= image_tag("logo.png", width: "200px", height: "50px%", color: "black") %>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <%= link_to('MISSION CONTROL', root_path, class: "navbar-brand") %>
+              <!-- <%= link_to('MISSION CONTROL', root_path, class: "navbar-brand") %> -->
             <li class="nav-item">
               <%= link_to('Command Centre', root_path, class: "nav-link") %>
             </li>
@@ -32,7 +35,7 @@
               <%= link_to('Briefings', briefings_path, class: "nav-link") %>
             </li>
             <li class="nav-item">
-              <%= link_to('Slack', root_path, class: "nav-link") %>
+              <%= link_to('Slack', "http://www.slack.com", class: "nav-link", target: "blank") %>
             </li>
           </ul>
           <!-- If user signed in -->
