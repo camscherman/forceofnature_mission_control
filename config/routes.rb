@@ -11,8 +11,10 @@ Rails.application.routes.draw do
     resources :events
   end
 end
+  resources :teams
 
   resources :briefings
+
 
 
 

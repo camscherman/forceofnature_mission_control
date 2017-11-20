@@ -17,6 +17,7 @@
 //= require fullcalendar
 //= require fullcalendar/gcal
 //= require rails-ujs
+//= require chosen-jquery
 //= require_tree .
 
 
@@ -34,7 +35,9 @@ $(document).ready(function() {
     });
 
     $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
+      $('#myInput').focus()
+    })
+    
 
-  });
+    $('.chosen-select').chosen({width: '500px'});
+});

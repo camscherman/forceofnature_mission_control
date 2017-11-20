@@ -1,0 +1,26 @@
+<h1>Assign Team</h1>
+<%= form_for @team do |f| %>
+  <% if @team.errors.present? %>
+    <p>
+      <%= @team.errors.full_messages.join(', ') %>
+    </p>
+  <% end %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+  </div>
+
+  <div>
+    Please select the members:
+    <%= f.collection_select :user_ids,
+                            User.order(:first_name),
+                            :id,
+                            :first_name,
+                            {},
+                            { multiple: true, class: 'chosen-select'}
+                             %>
+
+  </div>
+  <%= f.submit %>
+<% end %>

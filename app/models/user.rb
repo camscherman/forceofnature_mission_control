@@ -6,5 +6,7 @@ class User < ApplicationRecord
   has_many :events
 
   has_many :attending, dependent: :destroy
-  has_many :attend_events, through: :attending, source: :events     
+  has_many :attend_events, through: :attending, source: :events
+  has_many :memberships, dependent: :destroy
+  has_many :teams, through: :memberships
 end

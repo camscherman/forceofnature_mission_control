@@ -39,7 +39,12 @@ gem 'delayed_job_active_record'
 gem 'delayed_job_web'
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
-# gem 'bootstrap_form'
+
+
+
+gem 'chosen-rails'
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

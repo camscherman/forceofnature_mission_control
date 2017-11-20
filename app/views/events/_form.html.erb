@@ -1,6 +1,6 @@
   <div class="container" style="background-color:whitesmoke;box-shadow: 2px 2px 2px #888888;">
     <div class="row" style="padding: 20px;margin-top: 20px;margin-bottom: 30px;border-radius: 10px;">
-      <div class="col-md-7">
+      <div class="col-md-12">
 
 
           <%= form_with(model: event, local: true) do |form| %>
@@ -25,24 +25,19 @@
               <div class="form-group row">
                 <label for="evet_description" class="col-sm-2 col-form-label">Additional info</label>
                 <div class="col-sm-10">
-                  <textarea class="form-control" name="event[description]" rows="5" id="event_description"></textarea>
+                  <textarea class="form-control" name="event[description]" rows="3" id="event_description"></textarea>
                 </div>
               </div>
             </div>
-
-
       <%= bootstrap_form_for(@event) do |form| %>
-        <div class="form-group row">
-          <div class="col-sm-10 d-flex">
-           <%= form.datetime_select :start_time, id: :event_start_time, control_class: "custom-class" %>
-          </div>
+      <div class="row">
+        <div class="col-lg-5">
+          <%= form.datetime_select :start_time, id: :event_start_time, control_class: "custom-class" %>
         </div>
-
-
-        <div class="field">
-          <%= form.datetime_select :end_time, {}, wrapper_class: 'abc', control_class: "form-control", id: :event_end_time %>
+        <div class="col-lg-5">
+          <%= form.datetime_select :end_time, {}, control_class: "form-control", id: :event_end_time %>
         </div>
-
+      </div>
 
         <div class="form-group row">
           <label for="event_title" class="col-sm-2 col-form-label">Location</label>
@@ -51,15 +46,6 @@
             </div>
         </div>
 
-      </div>
-
-      <!-- Users Section -->
-      <div class="col-md-5">
-        <div class="card">
-          <div class="card-body">
-            USERS INFORMATION
-          </div>
-        </div>
       </div>
 
     </div>
