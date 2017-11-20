@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   has_many :using_briefing, dependent: :destroy
   has_many :briefings, through: :using_briefing, source: :briefing
-=======
+
   has_many :memberships, dependent: :destroy
   has_many :teams, through: :memberships
 
