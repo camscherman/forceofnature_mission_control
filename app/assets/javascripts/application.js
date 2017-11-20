@@ -34,12 +34,14 @@ $(document).ready(function(){
 
 
 $(document).ready(function() {
-    $('#calendar').fullCalendar({
-        googleCalendarApiKey: 'AIzaSyCpsNSu1HKCXGxYGN8k88rTiAYRjau_Ckw',
-        eventSources:[ {
-            googleCalendarId: '8ts0o3q0tuabk57ikucbusg6jc@group.calendar.google.com'
-
-          },
+    $('#calendar').fullCalendar(
+      {
+        googleCalendarApiKey: 'YOUR_API_KEY',
+        eventSources:[
+          // {
+          //   googleCalendarId: 'YOUR_CALENDAR_ID'
+          //
+          // },
               {
             url:"/api/v1/events"
                  }
