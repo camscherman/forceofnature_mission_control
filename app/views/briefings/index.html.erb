@@ -1,0 +1,29 @@
+<h1 align="center">Briefings</h1>
+<br />
+<hr />
+<div class="container">
+<div class="row">
+<div class="col-md-6 ml-auto">
+  <h3>Folders</h3>
+<% @files.each do |f| %>
+<% if f.is_folder? %>
+
+  <%= f.path %>
+ <hr />
+  <% end %>
+
+  <% end %>
+</div>
+<div class="col-md-6 mr-auto">
+<h3>Important Documents</h3>
+<% @files.each do |f| %>
+<% if !f.is_folder? %>
+
+  <%= f.path %>
+<hr />
+  <% end %>
+
+  <% end %>
+</div>
+</div>
+</div>

@@ -29,14 +29,24 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'faker'
+gem 'momentjs-rails'
+gem 'fullcalendar-rails', '>= 2.1.1'
+gem 'active_model_serializers'
+gem 'bootstrap_form'
+
 
 gem 'delayed_job_active_record'
 gem 'delayed_job_web'
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
-gem 'jquery-rails'
-gem 'bootstrap_form'
-# gem 'bootstrap_form'
+
+
+
+
+gem "font-awesome-rails"
+gem 'chosen-rails'
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

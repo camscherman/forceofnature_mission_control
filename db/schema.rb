@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119190549) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20171120011952) do
+=======
+ActiveRecord::Schema.define(version: 20171120002004) do
+>>>>>>> integration
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,13 +45,19 @@ ActiveRecord::Schema.define(version: 20171119190549) do
     t.index ["user_id"], name: "index_attendings_on_user_id"
   end
 
-
-  create_table "briefings", force: :cascade do |t|
-    t.string "doc_id"
-    t.string "file_id"
-    t.string "temp_team"
+  create_table "briefing_files", force: :cascade do |t|
+    t.bigint "file_path_id"
+    t.bigint "briefing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["briefing_id"], name: "index_briefing_files_on_briefing_id"
+    t.index ["file_path_id"], name: "index_briefing_files_on_file_path_id"
+  end
+
+  create_table "briefings", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
@@ -62,7 +72,6 @@ ActiveRecord::Schema.define(version: 20171119190549) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
-
   end
 
   create_table "events", force: :cascade do |t|
@@ -75,6 +84,28 @@ ActiveRecord::Schema.define(version: 20171119190549) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "file_paths", force: :cascade do |t|
+    t.string "path"
+    t.boolean "is_folder"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "memberships", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team_id"], name: "index_memberships_on_team_id"
+    t.index ["user_id"], name: "index_memberships_on_user_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -100,6 +131,24 @@ ActiveRecord::Schema.define(version: 20171119190549) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "using_briefings", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "briefing_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["briefing_id"], name: "index_using_briefings_on_briefing_id"
+    t.index ["user_id"], name: "index_using_briefings_on_user_id"
+  end
+
   add_foreign_key "attendings", "events"
   add_foreign_key "attendings", "users"
+  add_foreign_key "briefing_files", "briefings"
+  add_foreign_key "briefing_files", "file_paths"
+  add_foreign_key "memberships", "teams"
+  add_foreign_key "memberships", "users"
+<<<<<<< HEAD
+  add_foreign_key "using_briefings", "briefings"
+  add_foreign_key "using_briefings", "users"
+=======
+>>>>>>> integration
 end

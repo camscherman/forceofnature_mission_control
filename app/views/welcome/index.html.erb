@@ -1,20 +1,29 @@
+<div style="text-align: center;background-color:#4576ff;padding-bottom:0.5px;">
+        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#f8f9fa;width: 100%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Command Centre", root_path, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
+</div>
+<br>
 <div class='container'>
   <div class='row p-3 align-items-center'>
     <div class="col-6">
       <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 200px"><link><%= link_to 'SPACE CALENDAR', events_path, class:'text-light' %></link></button>
-      <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 200px"><link><%= link_to 'PERSONNEL', events_path, class:'text-light' %></button>
+      <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 200px"><link><%= link_to 'PERSONNEL', teams_path, class:'text-light' %></button>
     </div>
 
     <div class="col-6">
-      <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 200px"><link><%= link_to 'BRIEFINGS', events_path, class:'text-light' %></button>
+      <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 200px"><link><%= link_to 'BRIEFINGS', briefings_path, class:'text-light' %></button>
       <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 200px"><link><%= link_to 'SLACK', events_path, class:'text-light' %></button>
     </div>
   </div>
-
-  <div class='row'>
-    <div class="col-12 text-center">
-      <h1>COMMAND CENTRE</h1>
-    </div>
-  </div>
-
 </div>
+
+<!-- <div id="footer_j">
+<div class="footer" style="padding: 0;">
+  <div style="background-color: #4576ff;padding-bottom:0.5px;height: 10px;">
+  </div>
+  <div style="width: 250px;background-color: #4576ff;height: 50px;clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);">
+  </div>
+  <div class="container">
+    <p style="color: grey; text-align:right;">Copyright &copy; Force of Nature Alliance 2017 <br> Made by Codecore</p>
+  </div>
+</div>
+</div> -->
