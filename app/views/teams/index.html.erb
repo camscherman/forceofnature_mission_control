@@ -1,7 +1,12 @@
+<div class="container">
 <h1>All Teams</h1>
 
+<%= link_to "Make a new team", new_team_path, class: 'btn btn-primary' %>
+<br />
 <% @teams.each do |t| %>
   <div class="question-list-item">
-    <%= link_to t.name, team_path(t) %>
+    <br />
+    <%= link_to t.name, team_path(t), class: 'btn btn-outline-primary' %>
   </div>
 <% end %>
+</div>

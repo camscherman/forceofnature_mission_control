@@ -1,7 +1,8 @@
+<div class="container">
 Team : <p><%= @team.name%></p>
 <p>Users:</p>
   <% @team.users.each do |x| %>
-  <p><%= x.last_name %>, <%= x.first_name %></p>
+  <p><strong><%= x.last_name %>, <%= x.first_name %></strong>, <%= x.email %>, <%= x.address %>, <%= x.phone_number %></p>
   <% end %>
   <%= link_to 'Edit', edit_team_path(@team)%>
   <%= link_to 'Delete',
@@ -9,3 +10,4 @@ Team : <p><%= @team.name%></p>
   data:{confirm: 'Are you sure to delete the team?'},
   method: :delete%>
 </p>
+</div>

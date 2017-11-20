@@ -38,17 +38,17 @@
 
             <p class="text-right" style="color:white">
               <strong>Start time:</strong>
-              <%= @event.start_time %>
+              <%= @event.start_time.to_formatted_s(:long) %>
             </p>
 
             <p class="text-right" style="color:white">
               <strong>End time:</strong>
-              <%= @event.end_time %>
+              <%= @event.end_time.to_formatted_s(:long) %>
             </p>
 
             </div>
           </div>
-          <button type="button" class="btn btn-danger" name="button" >Leave Event</button>
+          <%= link_to "Leave Event", attending_path(@attending), method: :delete, class: "btn btn-danger" %>
           <% else %>
           <div class="card" style="background-color:#343a40;border-color:#4eb1f7;border-radius: 0 70px 0 0;">
             <div class="card-body">
@@ -67,17 +67,17 @@
 
               <p class="text-right" style="color:white">
                 <strong>Start time:</strong>
-                <%= @event.start_time %>
+                <%= @event.start_time.to_formatted_s(:long) %>
               </p>
 
               <p class="text-right" style="color:white">
                 <strong>End time:</strong>
-                <%= @event.end_time %>
+                <%= @event.end_time.to_formatted_s(:long) %>
               </p>
 
               </div>
             </div>
-              <button type="button" class="btn btn-primary" name="button" >Join Event</button>
+              <%= link_to "Join Event", event_attending_index_path(@event),method: :post,  class: "btn btn-primary" %>
             <% end %>
           <% end %>
       </div>
@@ -120,7 +120,7 @@
 </div>
 
 <% else %>
-<div id="footer_j">
+<!-- <div id="footer_j">
   <div class="footer" style="padding: 0;padding-bottom:50px;">
     <div style="background-color: #4576ff;padding-bottom:0.5px;height: 10px;">
     </div>
@@ -130,6 +130,6 @@
       <p style="color: grey; text-align:right;">Copyright &copy; Force of Nature Alliance 2017 <br> Made by Codecore</p>
     </div>
   </div>
-</div>
+</div> -->
 <% end %>
 <% end %>

@@ -1,3 +1,5 @@
+<div class="container">
+  <br />
 <h1>Assign Team</h1>
 <%= form_for @team do |f| %>
   <% if @team.errors.present? %>
@@ -6,12 +8,12 @@
     </p>
   <% end %>
 
-  <div>
+  <div class='form-group'>
     <%= f.label :name %>
     <%= f.text_field :name%>
   </div>
 
-  <div>
+  <div class='form-group'>
     Please select the members:
     <%= f.collection_select :user_ids,
                             User.order(:first_name),
@@ -24,3 +26,4 @@
   </div>
   <%= f.submit %>
 <% end %>
+</div>
