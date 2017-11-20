@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <!-- <p id="notice"><%= notice %></p> -->
 <div style="text-align: center;background-color:#4576ff;padding-bottom:0.5px;">
         <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#f8f9fa;width: 100%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Space Calendar", events_path, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
@@ -19,7 +17,7 @@
     </div>
 
     <div class='col-md-7 text-center'>
-      <h3>UPCOMING EVENTS</h3>
+      <br>
         <div id="calendar"></div>
       </div>
 
@@ -45,22 +43,21 @@
               </div>
             </div>
           </div>
-
+          <br>
           <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
 
     </div>
+    <div id="footer_j">
+    <div class="footer" style="padding: 0;">
+      <div style="background-color: #4576ff;padding-bottom:0.5px;height: 10px;">
+      </div>
+      <div style="width: 250px;background-color: #4576ff;height: 50px;clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);">
+      </div>
+      <div class="container">
+        <p style="color: grey; text-align:right;">Copyright &copy; Force of Nature Alliance 2017 <br> Made by Codecore</p>
+      </div>
+    </div>
+    </div>
 
 
-  </div>
-
-  <div id="footer_j">
-  <div class="footer" style="padding: 0;padding-bottom:50px;">
-    <div style="background-color: #4576ff;padding-bottom:0.5px;height: 10px;">
-    </div>
-    <div style="width: 250px;background-color: #4576ff;height: 60px;clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);">
-    </div>
-    <div class="container">
-      <p style="color: grey; text-align:right;">Copyright &copy; Force of Nature Alliance 2017 <br> Made by Codecore</p>
-    </div>
-  </div>
   </div>

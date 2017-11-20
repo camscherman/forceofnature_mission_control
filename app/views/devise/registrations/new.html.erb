@@ -1,59 +1,125 @@
-<h2>Sign up</h2>
+<div style="text-align: center;background-color:#4576ff;padding-bottom:0.5px;">
+        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#f8f9fa;width: 100%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Sign Up", new_user_registration_path, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="panel panel-default"  style="color: black;">
-    <div class="panel-body">
-
-  <div class="field">
-        <%= f.label :first_name %><br />
-        <%= f.text_field :first_name, autofocus: true %>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group row">
+        <label for="first_name">First Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="user[first_name]" class="form-control" id="first_name" autofocus="true">
+          </div>
       </div>
-
-      <div class="field">
-        <%= f.label :last_name %><br />
-        <%= f.text_field :last_name, autofocus: true %>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group row">
+        <label for="last_name">Last Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="user[last_name]" class="form-control" id="last_name" autofocus="true">
+          </div>
       </div>
-
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :phone_number %><br />
-        <%= f.text_field :phone_number, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :address %><br />
-        <%= f.text_field :address, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :category %><br />
-        <%= f.text_field :category, autofocus: true %>
-      </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group row">
+        <label for="email">Email</label>
+          <div class="col-sm-10">
+            <input type="text" name="user[email]" class="form-control" id="email" autofocus="true">
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group row">
+        <label for="phone_number">Phone #</label>
+          <div class="col-sm-10">
+            <input type="text" name="user[phone_number]" class="form-control" id="phone_number">
+          </div>
+      </div>
+    </div>
   </div>
-</div>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group row">
+        <label for="address">Address</label>
+          <div class="col-sm-10">
+            <input type="text" name="user[address]" class="form-control" id="address">
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group row">
+        <label for="category">Category</label>
+          <div class="col-sm-10">
+            <input type="text" name="user[category]" class="form-control" id="category">
+          </div>
+      </div>
+    </div>
   </div>
-<% end %>
 
-</div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+    <!-- <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %> -->
 
-<%= render "devise/shared/links" %>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="form-group row">
+        <label for="password">Password</label>
+          <div class="col-lg-10">
+            <input type="text" name="user[password]" class="form-control" id="password">
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="form-group row">
+        <label for="password_confirmation">Confrim Password</label>
+          <div class="col-sm-10">
+            <input type="text" name="user[password_confirmation]" class="form-control" id="password_confirmation">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="form-group row">
+        <label for="current_password">Current Password</label>
+          <div class="col-sm-10">
+            <input type="text" name="user[current_password]" class="form-control" id="current_password">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <%= f.submit "Sign Up" %>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+  <% end %>
+  </div>
+  <div id="footer_j">
+  <div class="footer" style="padding: 0;">
+    <div style="background-color: #4576ff;padding-bottom:0.5px;height: 10px;">
+    </div>
+    <div style="width: 250px;background-color: #4576ff;height: 50px;clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);">
+    </div>
+    <div class="container">
+      <p style="color: grey; text-align:right;">Copyright &copy; Force of Nature Alliance 2017 <br> Made by Codecore</p>
+    </div>
+  </div>
+  </div>
