@@ -15,7 +15,9 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
+//= require chosen-jquery
 //= require_tree .
+
 
 
 
@@ -24,6 +26,8 @@ $(document).ready(function(){
     $('.chosen-select').chosen({width: '500px'});
   });
   
+
+
 
 
 

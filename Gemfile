@@ -36,9 +36,16 @@ gem 'delayed_job_web'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
 gem 'bootstrap_form'
-gem "font-awesome-rails"
+
+
 gem 'chosen-rails'
 
+gem "font-awesome-rails"
+<<<<<<< HEAD
+gem 'chosen-rails'
+
+=======
+>>>>>>> integration
 
 # gem 'bootstrap_form'
 
