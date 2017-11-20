@@ -1,12 +1,27 @@
-<br>
-<div style="margin-left:50px; border-bottom: solid 3px; border-color: #eaf5ff;">
+<!-- <div style="margin-left:50px; border-bottom: solid 3px; border-color: #eaf5ff;">
   <h1 style="background-color:#eaf5ff; display: inline-block; margin-bottom: 0;width: 400px;clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);padding-left: 20px">New Event</h1>
-</div
+</div -->
+<div style="text-align: center;background-color:#4576ff;padding-bottom:0.5px;">
+        <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#f8f9fa;width: 100%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "New Event", new_event_path(@event), method: :post, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
+</div>
+
 <br>
 <%= render 'form', event: @event %>
 <br>
-<div class="container">
+<!-- <div class="container">
   <div style="width:96%;border-bottom: solid 3px; border-color: #eaf5ff;text-align: right">
     <h2 class="edit_back" style="background-color:#c6edff; display: inline-block; margin-bottom: 0; margin-right: 30px;padding: 5px;padding-left: 20px;clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);"><%= link_to 'Back', events_path %></h2>
+  </div>
+</div> -->
+
+<div id="footer_j">
+  <div class="footer" style="padding: 0;padding-bottom:60px;">
+    <div style="background-color: #4576ff;padding-bottom:0.5px;height: 10px;">
+    </div>
+    <div style="width: 250px;background-color: #4576ff;height: 60px;clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);">
+    </div>
+    <div class="container">
+      <p style="color: grey; text-align:right;">Copyright &copy; Force of Nature Alliance 2017 <br> Made by Codecore</p>
+    </div>
   </div>
 </div>

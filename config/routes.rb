@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :briefings
 
 
-
   match "/delayed_job" => DelayedJobWeb, :anchor => false, :via => [:get, :post]
 
   root 'welcome#index'

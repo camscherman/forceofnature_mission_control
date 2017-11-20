@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @event = Event.new
   end
 
   # GET /events/1
@@ -32,14 +33,14 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-<<<<<<< HEAD
+# <<<<<<< HEAD
         format.html { redirect_to @event, notice: 'Event was successfully created.', :style => 'text-align: center;' }
-=======
+# =======
         #EventRemindersJob.set(wait: 20.seconds).perform_later(@event)
 
         EventsMailer.notify_event_user_creator(@event).deliver_now
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
->>>>>>> integration
+# >>>>>>> integration
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
