@@ -4,6 +4,7 @@ class BriefingsController < ApplicationController
 
     def new
         @briefing = Briefing.new
+        @teams = Team.all
     end 
 
     def create

@@ -6,7 +6,7 @@ FilePath.destroy_all
 
 User.create(email: "admin@example.com", password: "supersecret", admin: true)
 10.times.each do
-  User.create( email: Faker::Internet.free_email, password: Faker::Internet.password )
+  User.create( first_name: Faker::Name.name, last_name: Faker::Name.last_name ,email: Faker::Internet.free_email, password: Faker::Internet.password )
 end
 @users = User.all
 
