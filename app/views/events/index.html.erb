@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <!-- <p id="notice"><%= notice %></p> -->
 <div style="text-align: center;background-color:#4576ff;padding-bottom:0.5px;">
         <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#f8f9fa;width: 100%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Space Calendar", events_path, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
@@ -9,26 +7,24 @@
       <h5 class='mb-2'>VIEW BY TEAM:</h5>
       <ul class="list-unstyled list-border-black-20 list-border-y text-left text-black-70">
         <li class='py-2 list-group-item'>Vancouver</li>
-        <li class='py-2 list-group-item'>Ricjmnd</li>
+        <li class='py-2 list-group-item'>Richmond</li>
         <li class='py-2 list-group-item'>Burnaby</li>
         <li class='py-2 list-group-item'>Surrey</li>
-        <li class='py-2 list-group-item'>Port oody</li>
+        <li class='py-2 list-group-item'>Port Moody</li>
         <li class='py-2 list-group-item'>Langley</li>
-        <li class='py-2 list-group-item'>Abbotsgord</li>
+        <li class='py-2 list-group-item'>Abbotsford</li>
       </ul>
     </div>
 
     <div class='col-md-7 text-center'>
-      <h3>UPCOMING EVENTS</h3>
+      <br>
         <div id="calendar"></div>
       </div>
 
     <div class='col-md-3 text-center align-items-center'>
           <button type='button' class='btn btn-primary btn-block' id='viewevent' style="width: 100%; height: 100px"><link><%= link_to 'VIEW EVENT', events_path, class:'text-light' %></link></button>
-          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'CREATE EVENT', events_path, class:'text-light' %></button>
-          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
 
-
+          <br>
           <!-- CREATE EVENT MODAL -->
           <button type='button' class='btn btn-primary btn-block' data-toggle="modal" data-target="#createEvent" style="width: 100%; height: 100px">CREATE EVENT</button>
 
@@ -49,23 +45,21 @@
               </div>
             </div>
           </div>
-
-
+          <br>
           <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
 
     </div>
+    <div id="footer_j">
+    <div class="footer" style="padding: 0;">
+      <div style="background-color: #4576ff;padding-bottom:0.5px;height: 10px;">
+      </div>
+      <div style="width: 250px;background-color: #4576ff;height: 50px;clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);">
+      </div>
+      <div class="container">
+        <p style="color: grey; text-align:right;">Copyright &copy; Force of Nature Alliance 2017 <br> Made by Codecore</p>
+      </div>
+    </div>
+    </div>
 
 
-  </div>
-
-  <div id="footer_j">
-  <div class="footer" style="padding: 0;padding-bottom:50px;">
-    <div style="background-color: #4576ff;padding-bottom:0.5px;height: 10px;">
-    </div>
-    <div style="width: 250px;background-color: #4576ff;height: 60px;clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);">
-    </div>
-    <div class="container">
-      <p style="color: grey; text-align:right;">Copyright &copy; Force of Nature Alliance 2017 <br> Made by Codecore</p>
-    </div>
-  </div>
   </div>
