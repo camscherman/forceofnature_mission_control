@@ -1,6 +1,6 @@
 class BriefingsController < ApplicationController
     
-    before_action :find_briefing, only[:show, :edit, :update, :destroy]
+    before_action :find_briefing, only: [:show, :edit, :update, :destroy]
 
     def new
         @briefing = Briefing.new
@@ -8,7 +8,6 @@ class BriefingsController < ApplicationController
 
     def create
         @briefing = Briefing.new briefing_params
-        @briefing.user = current_user
         if @briefing.save
             flash[:notice] = 'Briefing created successfully'
             redirect_to briefing_path(@briefing)
@@ -47,7 +46,7 @@ class BriefingsController < ApplicationController
     private
 
     def briefing_params
-        params.require(:briefing).permit(:id, {file_path_ids: []} })
+        params.require(:briefing).permit(:id, {file_path_ids: [] })
     end 
 
     def find_briefing

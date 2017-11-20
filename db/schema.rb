@@ -39,8 +39,6 @@ ActiveRecord::Schema.define(version: 20171120002004) do
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_attendings_on_event_id"
     t.index ["user_id"], name: "index_attendings_on_user_id"
-<<<<<<< HEAD
-=======
   end
 
   create_table "briefing_files", force: :cascade do |t|
@@ -70,7 +68,6 @@ ActiveRecord::Schema.define(version: 20171120002004) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
->>>>>>> integration
   end
 
   create_table "events", force: :cascade do |t|

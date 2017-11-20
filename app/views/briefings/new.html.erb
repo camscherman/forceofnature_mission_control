@@ -8,6 +8,12 @@
       <%= select_tag(:team_id, options_for_select(['Team  A', 'Team B', 'Team C']))%>
     </div>
 
+    <div>
+      <%= form.label :file_path_ids %>
+      <%= form.collection_select :file_path_ids, FilePath.all, :id, :path,
+                                  {},
+                                  { multiple: true, class: 'chosen-select' } %>
+    </div>
 
 
   

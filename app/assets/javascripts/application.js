@@ -10,8 +10,20 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require chosen-jquery
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require_tree .
+
+
+
+
+$(document).ready(function(){
+    $('.chosen-select').chosen({width: '500px'});
+  });
+  
+
+
+
