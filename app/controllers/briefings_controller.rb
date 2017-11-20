@@ -1,11 +1,11 @@
 class BriefingsController < ApplicationController
-    
+
     before_action :find_briefing, only: [:show, :edit, :update, :destroy]
 
     def new
         @briefing = Briefing.new
         @teams = Team.all
-    end 
+    end
 
     def create
         @briefing = Briefing.new briefing_params
@@ -14,20 +14,20 @@ class BriefingsController < ApplicationController
             redirect_to briefing_path(@briefing)
         else
             render :edit
-        end 
+        end
     end
 
 
     def show
-    end 
+    end
 
     def index
-        @briefings = Briefing.order(created_at: :desc)
-    end 
+        @files = FilePath.all
+    end
 
     def edit
 
-    end     
+    end
 
     def update
         if @briefing.update briefing_params
@@ -35,23 +35,23 @@ class BriefingsController < ApplicationController
             redirect_to @briefing
         else
             render :edit
-        end 
-    end 
+        end
+    end
 
-    def destroy 
+    def destroy
         @briefing.destory
         flsh[:notice] = "Briefing deleted successfully"
         redirect_to briefing_path
-    end 
+    end
 
     private
 
     def briefing_params
         params.require(:briefing).permit(:id, {file_path_ids: [] })
-    end 
+    end
 
     def find_briefing
-        @briefing = Briefing.find params[:id]        
-    end 
+        @briefing = Briefing.find params[:id]
+    end
 
 end

@@ -1,3 +1,4 @@
+<div class="container">
 Team : <p><%= @team.name%></p>
 <p>Users:</p>
   <% @team.users.each do |x| %>
@@ -9,3 +10,4 @@ Team : <p><%= @team.name%></p>
   data:{confirm: 'Are you sure to delete the team?'},
   method: :delete%>
 </p>
+</div>
