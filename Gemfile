@@ -38,14 +38,10 @@ gem 'jquery-rails'
 gem 'bootstrap_form'
 
 
-gem 'chosen-rails'
 
 gem "font-awesome-rails"
-<<<<<<< HEAD
 gem 'chosen-rails'
 
-=======
->>>>>>> integration
 
 # gem 'bootstrap_form'
 
