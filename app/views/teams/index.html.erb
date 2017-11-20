@@ -1,0 +1,7 @@
+<h1>All Teams</h1>
+
+<% @teams.each do |t| %>
+  <div class="question-list-item">
+    <%= link_to t.name, team_path(t) %>
+  </div>
+<% end %>
