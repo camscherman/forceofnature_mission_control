@@ -6,9 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type='text/javascript' src='fullcalendar/gcal.js'></script>
+
   </head>
 
   <body>
+    <% flash.each do |name,msg| %>
+      <%= content_tag(:div,:msg, class: "alert alert-#{name}" ) %>
+    <% end %>
+
     <%# if user_signed_in? %>
       <!-- <ul>
         <li><%= link_to 'New Event', new_event_path %></li>

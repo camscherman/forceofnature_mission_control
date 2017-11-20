@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <!-- <p id="notice"><%= notice %></p> -->
 <div style="text-align: center;background-color:#4576ff;padding-bottom:0.5px;">
         <h1 style="font-family: Verdana, Arial, Helvetica, sans-serif;background:#f8f9fa;width: 100%;clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);"> <%= link_to "Space Calendar", events_path, :style=>'margin-right: 45px; font-size: 30px' %> </h1>
@@ -17,11 +19,15 @@
     </div>
 
     <div class='col-md-7 text-center'>
-        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=8ts0o3q0tuabk57ikucbusg6jc%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FVancouver" style="border-width:0" width="600" height="500" frameborder="0" scrolling="no"></iframe>
-    </div>
+      <h3>UPCOMING EVENTS</h3>
+        <div id="calendar"></div>
+      </div>
 
     <div class='col-md-3 text-center align-items-center'>
-          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to '', events_path, class:'text-light', label: "Click Here"%></link></button>
+          <button type='button' class='btn btn-primary btn-block' id='viewevent' style="width: 100%; height: 100px"><link><%= link_to 'VIEW EVENT', events_path, class:'text-light' %></link></button>
+          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'CREATE EVENT', events_path, class:'text-light' %></button>
+          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
+
 
           <!-- CREATE EVENT MODAL -->
           <button type='button' class='btn btn-primary btn-block' data-toggle="modal" data-target="#createEvent" style="width: 100%; height: 100px">CREATE EVENT</button>
@@ -48,6 +54,7 @@
           <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
 
     </div>
+
 
   </div>
 
