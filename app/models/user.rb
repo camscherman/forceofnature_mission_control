@@ -8,6 +8,11 @@ class User < ApplicationRecord
   has_many :attending, dependent: :destroy
   has_many :attend_events, through: :attending, source: :events
 
+
   has_many :using_briefing, dependent: :destroy
-  has_many :briefings, through: :using_briefing, source: :briefing    
+  has_many :briefings, through: :using_briefing, source: :briefing
+=======
+  has_many :memberships, dependent: :destroy
+  has_many :teams, through: :memberships
+
 end

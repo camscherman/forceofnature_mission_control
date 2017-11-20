@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120011952) do
+ActiveRecord::Schema.define(version: 20171119190549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,16 +41,10 @@ ActiveRecord::Schema.define(version: 20171120011952) do
     t.index ["user_id"], name: "index_attendings_on_user_id"
   end
 
-  create_table "briefing_files", force: :cascade do |t|
-    t.bigint "file_path_id"
-    t.bigint "briefing_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["briefing_id"], name: "index_briefing_files_on_briefing_id"
-    t.index ["file_path_id"], name: "index_briefing_files_on_file_path_id"
-  end
-
   create_table "briefings", force: :cascade do |t|
+    t.string "doc_id"
+    t.string "file_id"
+    t.string "temp_team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -112,19 +106,6 @@ ActiveRecord::Schema.define(version: 20171120011952) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "using_briefings", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "briefing_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["briefing_id"], name: "index_using_briefings_on_briefing_id"
-    t.index ["user_id"], name: "index_using_briefings_on_user_id"
-  end
-
   add_foreign_key "attendings", "events"
   add_foreign_key "attendings", "users"
-  add_foreign_key "briefing_files", "briefings"
-  add_foreign_key "briefing_files", "file_paths"
-  add_foreign_key "using_briefings", "briefings"
-  add_foreign_key "using_briefings", "users"
 end

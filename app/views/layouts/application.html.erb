@@ -6,9 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type='text/javascript' src='fullcalendar/gcal.js'></script>
+
   </head>
 
   <body>
+    <% flash.each do |name,msg| %>
+      <%= content_tag(:div,:msg, class: "alert alert-#{name}" ) %>
+    <% end %>
+
     <%# if user_signed_in? %>
       <!-- <ul>
         <li><%= link_to 'New Event', new_event_path %></li>
@@ -25,7 +31,7 @@
               <%= link_to('Command Centre', root_path, class: "nav-link") %>
             </li>
             <li class="nav-item">
-              <%= link_to('Space Calendar', root_path, class: "nav-link") %>
+              <%= link_to('Space Calendar', events_path, class: "nav-link") %>
             </li>
             <li class="nav-item">
               <%= link_to('Personnel', root_path, class: "nav-link") %>
@@ -66,7 +72,7 @@
 
         </div>
       </nav>
-      
+
     <%= yield %>
   </body>
 </html>
