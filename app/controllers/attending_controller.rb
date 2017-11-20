@@ -31,6 +31,5 @@ class AttendingController < ApplicationController
     redirect_to attending.event, notice: "Removed from event"
   end
 
-  private
 
 end

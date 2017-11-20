@@ -1,11 +1,14 @@
 
 <%= form_for @briefing do |form| %>  
+    
 
   
     <div>
       <%= form.label :team_id %>
       <%= select_tag(:team_id, options_for_select(['Team  A', 'Team B', 'Team C']))%>
     </div>
+
+
 
   
     <%= form.submit %>
