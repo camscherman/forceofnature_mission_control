@@ -21,6 +21,18 @@
 //= require_tree .
 
 
+
+
+
+$(document).ready(function(){
+    $('.chosen-select').chosen({width: '500px'});
+  });
+  
+
+
+
+
+
 $(document).ready(function() {
     $('#calendar').fullCalendar({
         googleCalendarApiKey: 'AIzaSyCpsNSu1HKCXGxYGN8k88rTiAYRjau_Ckw',
