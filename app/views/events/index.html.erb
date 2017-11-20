@@ -22,11 +22,9 @@
       </div>
 
     <div class='col-md-3 text-center align-items-center'>
-          <button type='button' class='btn btn-primary btn-block' id='viewevent' style="width: 100%; height: 100px"><link><%= link_to 'VIEW EVENT', events_path, class:'text-light' %></link></button>
 
-          <br>
-          <!-- CREATE EVENT MODAL -->
-          <button type='button' class='btn btn-primary btn-block' data-toggle="modal" data-target="#createEvent" style="width: 100%; height: 100px">CREATE EVENT</button>
+
+          <button type='button' class='btn btn-primary btn-block my-2' data-toggle="modal" data-target="#createEvent" style="width: 100%; height: 100px">CREATE EVENT</button>
 
           <div class="modal fade bd-example-modal-lg" id="createEvent" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -39,14 +37,12 @@
                 </div>
                 <div class="modal-body">
                   Please fill out the form below
-                <%= render 'form', event: @event %>
-
+                <%= render 'form_modal', event: @event %>
                 </div>
               </div>
             </div>
           </div>
           <br>
-          <button type='button' class='btn btn-primary btn-block' style="width: 100%; height: 100px"><link><%= link_to 'EDIT EVENT', events_path, class:'text-light' %></button>
 
     </div>
     <div id="footer_j">
