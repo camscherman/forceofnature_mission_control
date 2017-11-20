@@ -25,7 +25,7 @@ end
 files = []
 
 30.times.each do
-  files.push(Faker::File.file_name)
+  files << Faker::File.file_name
 end
 
 10.times.each do
@@ -42,6 +42,32 @@ files.each do |f|
     )
 end
 
+@files = FilePath.all
+my_files=[]
+@files.each do |f|
+  my_files << f
+
+end
+
+# 5.times do
+#   my_files = []
+#   users = []
+#
+#   5.times do
+#     my_files << @files.sample
+#   end
+#
+#   5.times do
+#     users = @users.sample
+#   end
+#
+#   @briefing = Briefing.new
+#   @briefing.allowed_users = users
+#   @briefing.file_paths = my_files
+#
+# end
+
+
+puts "#{Briefing.count} briefings added"
 puts "#{FilePath.count} files and folders created"
 puts "#{Event.count} events added"
-
