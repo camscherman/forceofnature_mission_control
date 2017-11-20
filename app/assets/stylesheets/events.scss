@@ -23,6 +23,7 @@ div.rails-bootstrap-forms-datetime-select {
 
 
 .footer {
+    // position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -30,4 +31,5 @@ div.rails-bootstrap-forms-datetime-select {
     color: white;
     text-align: center;
     padding: 20px;
+    visibility: hidden;
 }
