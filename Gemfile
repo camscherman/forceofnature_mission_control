@@ -36,6 +36,8 @@ gem 'delayed_job_web'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
 gem 'bootstrap_form'
+
+gem 'chosen-rails'
 # gem 'bootstrap_form'
 
 # Use Redis adapter to run Action Cable in production

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :attending, shallow: true, only: [:create, :destroy]
   end
 
-
+  resources :teams
 
 
   match "/delayed_job" => DelayedJobWeb, :anchor => false, :via => [:get, :post]
