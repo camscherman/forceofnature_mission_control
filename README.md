@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A ruby on rails platform for volunteers to organize, plan, and edit events. Full local calendar integrated with Google Calendar API. User authentication and restrictions.
 
-Things you may want to cover:
+To get started on your local computer, clone this repository.
 
-* Ruby version
+run the following commands:
 
-* System dependencies
+$bundle
 
-* Configuration
+$rails db:create
 
-* Database creation
+$rails db:migrate
 
-* Database initialization
+The app has some optional integration with Google calendar API. 
 
-* How to run the test suite
+Edit the add/assets/javascript/application.js by inserting your Google calendar API key by repacing YOUR_API_KEY
+and YOUR_CALENDAR_ID.
 
-* Services (job queues, cache servers, search engines, etc.)
+Also, to integrate the mailer, you need to set up your config/initializers/app_keys.rb (follow app_keys.rb.example to see an example)
 
-* Deployment instructions
 
-* ...
